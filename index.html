@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/fruit1.png" type="">
+    <title>Bank</title>
+     <!-- tailwind css cdn -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+ 
+ 
+     <!-- open sence google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+ 
+ 
+     <!-- font awesome link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+ 
+ 
+     <!-- google font style -->
+     <style>
+         .openfont {
+             font-family: 'Open Sans', sans-serif;
+         }
+     </style>
+ 
+ 
+     <!-- custom color  -->
+     <script>
+         tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         clifford: '#da373d',
+                         pcolor: '#12121299',
+                         bcolor: '#F85559',
+                     }
+                 }
+             }
+         }
+     </script>
+ 
+     <!-- font awesome script -->
+     <script src="https://kit.fontawesome.com/f2c84d4348.js" crossorigin="anonymous"></script>
+ 
+</head>
+<!-- start main file  -->
+<body class="my-12">
+    <h1 class="text-center text-3xl font-semibold mb-4">Welcome to The Bank</h1>
+
+    <section class="bg-green-300 w-9/12 mx-auto p-12 ">
+        <h2 class="text-2xl font-semibold mb-4 text-cyan-700">Please Login</h2>
+        <input id="emailField" type="email" name=""  placeholder="Your E-mail" class="block w-9/12 mb-4 pl-2">
+        <input id="passwordField" type="password" name="" placeholder="Your password" class="block w-9/12 mb-4 pl-2">
+        <button class="btn bg-amber-500 hover:bg-green-800 text-white text-lg rounded-lg" onclick="login()" >Login</button>
+    </section>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
+
+
+<!-- tailwind config file
+tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} -->

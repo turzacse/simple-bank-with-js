@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/fruit1.png" type="">
+    <title>Bank Dashboard</title>
+    <!-- tailwind css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- open sence google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- font awesome link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- google font style -->
+    <style>
+        .openfont {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+
+
+    <!-- custom color  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        pcolor: '#12121299',
+                        bcolor: '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/f2c84d4348.js" crossorigin="anonymous"></script>
+
+</head>
+<!-- start main file  -->
+
+<body class="my-12">
+    <h1 class="text-center text-3xl font-semibold mb-4">Welcome to The Bank</h1>
+
+    <section class="bg-green-300 w-9/12 mx-auto p-12 grid lg:grid-cols-3 gap-5">
+        <div class="bg-orange-600 p-8 text-3xl font-semibold text-white rounded-lg">
+            <h1 class="my-2">Deposite</h1>
+            <p>$<span id="deposite">00</span></p>
+        </div>
+        <div class="bg-amber-600 p-8 text-3xl font-semibold text-white rounded-lg">
+            <h1 class="my-2">Withdraw</h1>
+            <p>$<span id="withdraw">00</span></p>
+        </div>
+        <div class="bg-white p-8 text-3xl font-semibold text-black rounded-lg">
+            <h1 class="my-2">Total Ammount</h1>
+            <p>$<span id="total">1000</span></p>
+        </div>
+    </section>
+
+
+    <section class="bg-green-300 w-9/12 mx-auto p-12 grid lg:grid-cols-2 gap-10">
+        <div class="bg-yellow-500 p-4 rounded-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-cyan-700">Deposite Ammount</h2>
+            <input id="depositeField" type="number" name="" placeholder="Enter Ammount"
+                class="block w-9/12 mb-4 p-2 rounded-lg">
+            <button id="btn-deposite" class="btn bg-green-800 text-white text-lg hover:bg-sky-800">Deposite</button>
+        </div>
+
+        <div class="bg-blue-600 p-4 rounded-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-black">Widthdraw Ammount</h2>
+            <input id="withdrawField" type="number" name="" placeholder="Enter Ammount"
+                class="block w-9/12 mb-4 pl-2 py-2 rounded-lg">
+            <button id="btn-withdraw" class="btn bg-green-800 text-white text-lg hover:bg-red-700">Widthdraw</button>
+        </div>
+    </section>
+
+    <section class="bg-green-300 w-9/12 mx-auto p-12 flex justify-end">
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button id="btn-logout" class="btn bg-red-600 text-white border-none hover:bg-blue-600" onclick="my_modal_2.showModal()">Logout</button>
+        <dialog id="my_modal_2" class="modal">
+            <form method="dialog" class="modal-box">
+                <p class="mb-4">You want to log out</p>
+                <button id="btn-logout-yes" class="btn bg-green-700">Yes</button>
+                <button id="btn-logout-no" class="btn bg-orange-600">No</button>
+            </form>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
+        <!-- <button id="btn-logout" class="btn bg-red-600 text-white border-none hover:bg-blue-600">Logout</button> -->
+    </section>
+
+    <script src="js/deposite.js"></script>
+</body>
+
+</html>
